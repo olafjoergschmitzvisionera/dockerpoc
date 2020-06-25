@@ -28,7 +28,6 @@ sudo docker run \
 --host \
 --restart always \
 --name gitlab-local \
---restart always \ 
 --volume $GITLAB_HOME/config:/etc/gitlab:Z \
 --volume $GITLAB_HOME/log:/var/log/gitlab:Z \
 --volume $GITLAB_HOME/data:/var/log/gitlab:Z \
