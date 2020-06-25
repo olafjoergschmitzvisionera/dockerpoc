@@ -2,7 +2,7 @@ Run gitlab
 
 docker pull gitlab/gitlab-ce:latest
 
-then export GITLAB_HOME=~/docker
+then to manually export GITLAB_HOME=~/docker better do it in the .bashrc script
 
 mkdir config
 
