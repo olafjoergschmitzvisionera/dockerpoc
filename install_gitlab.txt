@@ -10,7 +10,30 @@ mkdir log
 
 mkdir data
 
-sudo docker run --detach --hostname gitlab.example.com --restart always --publish 443:443 --publish 83:83 --publish 22:22   --name gitlab   --restart always \ --volume $GITLAB_HOME/config:/etc/gitlab:Z --volume $GITLAB_HOME/log:/var/log/gitlab:Z --volume $GITLAB_HOME/data:/var/log/gitlab:Z gitlab/gitlab-ce:latest
+sudo docker run \
+--detach \
+--hostname gitlab.example.com \
+--restart always \
+--publish 443:443 \
+--publish 83:83 \
+--publish 22:22 \ 
+--name gitlab \   
+--volume $GITLAB_HOME/config:/etc/gitlab:Z \
+--volume $GITLAB_HOME/log:/var/log/gitlab:Z \
+--volume $GITLAB_HOME/data:/var/log/gitlab:Z \
+gitlab/gitlab-ce:latest
 
-sudo docker run --detach --host --restart always --publish 443:443 --publish 83:83 --publish 22:22   --name gitlab-local   --restart always \ --volume $GITLAB_HOME/config:/etc/gitlab:Z --volume $GITLAB_HOME/log:/var/log/gitlab:Z --volume $GITLAB_HOME/data:/var/log/gitlab:Z gitlab/gitlab-ce:latest
+sudo docker run \
+--detach \
+--host \
+--restart always \
+--publish 443:443 \
+--publish 83:83 \
+--publish 22:22 \ 
+--name gitlab-local \
+--restart always \ 
+--volume $GITLAB_HOME/config:/etc/gitlab:Z \
+--volume $GITLAB_HOME/log:/var/log/gitlab:Z \
+--volume $GITLAB_HOME/data:/var/log/gitlab:Z \
+gitlab/gitlab-ce:latest
 
