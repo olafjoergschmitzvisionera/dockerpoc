@@ -19,7 +19,7 @@ sudo docker run \
 --hostname gitlab.example.com \
 --restart-always \
 --publish 443:443 \
---publish 83:83 \
+--publish 83:80 \
 --publish 22:22 \ 
 --name gitlab \   
 --volume $GITLAB_HOME/config:/etc/gitlab:Z \
@@ -34,7 +34,7 @@ sudo docker run \
 --add-host gitlab.example.com:192.168.178.20 \
 --restart always \
 --publish 443:443 \
---publish 83:83 \
+--publish 83:80 \
 --publish 22:22 \ 
 --name gitlab-local \
 --volume $GITLAB_HOME/config:/etc/gitlab:Z \
