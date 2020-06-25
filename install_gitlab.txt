@@ -2,6 +2,8 @@ Run gitlab
 
 docker pull gitlab/gitlab-ce:latest
 
+!!!make sure that you dont have ssh,http,https service running!!!
+
 then to manually export GITLAB_HOME=~/docker better do it in the .bashrc script
 
 mkdir config
@@ -15,7 +17,7 @@ sudo docker run \
 --hostname gitlab.example.com \
 --restart always \
 --publish 443:443 \
---publish 83:83 \
+--publish 80:80 \
 --publish 22:22 \ 
 --name gitlab \   
 --volume $GITLAB_HOME/config:/etc/gitlab:Z \
