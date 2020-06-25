@@ -42,3 +42,4 @@ sudo docker run \
 --volume $GITLAB_HOME/data:/var/log/gitlab:Z \
 gitlab/gitlab-ce:latest
 
+Wont do the smtp setup and so right now. I will finish that stuff later on, now it is time to get healthy. 
