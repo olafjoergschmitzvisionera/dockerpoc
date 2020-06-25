@@ -27,6 +27,9 @@ sudo docker run \
 --detach \
 --add-host gitlab.example.com:192.168.178.20 \
 --restart always \
+--publish 443:443 \
+--publish 83:83 \
+--publish 22:22 \ 
 --name gitlab-local \
 --volume $GITLAB_HOME/config:/etc/gitlab:Z \
 --volume $GITLAB_HOME/log:/var/log/gitlab:Z \
